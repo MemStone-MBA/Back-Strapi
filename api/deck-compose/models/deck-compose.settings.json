@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deck",
+  "info": {
+    "name": "Deck"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "idUser": {
+      "type": "string"
+    },
+    "listCards": {
+      "type": "json"
+    }
+  }
+}

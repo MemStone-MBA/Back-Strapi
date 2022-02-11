@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "card",
+  "info": {
+    "name": "Card"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "life": {
+      "type": "integer"
+    },
+    "damage": {
+      "type": "integer"
+    },
+    "drop_rate": {
+      "type": "float"
+    },
+    "path": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "integer"
+    }
+  }
+}

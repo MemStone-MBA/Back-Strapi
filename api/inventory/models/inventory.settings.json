@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "name": "Inventory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "idUser": {
+      "type": "string"
+    },
+    "idCard": {
+      "type": "string"
+    }
+  }
+}
