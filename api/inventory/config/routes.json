@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/inventories",
+      "path": "/inventory",
       "handler": "inventory.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/inventories/count",
+      "path": "/inventory/count",
       "handler": "inventory.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/inventories/:id",
+      "path": "/inventory/:id",
       "handler": "inventory.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/inventories",
+      "path": "/inventory",
       "handler": "inventory.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/inventories/:id",
+      "path": "/inventory/:id",
       "handler": "inventory.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/inventories/:id",
+      "path": "/inventory/:id",
       "handler": "inventory.delete",
       "config": {
         "policies": []

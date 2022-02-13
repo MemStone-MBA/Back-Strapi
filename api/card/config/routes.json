@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/deck-composes",
-      "handler": "deck-compose.find",
+      "path": "/card",
+      "handler": "card.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/deck-composes/count",
-      "handler": "deck-compose.count",
+      "path": "/card/count",
+      "handler": "card.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/deck-composes/:id",
-      "handler": "deck-compose.findOne",
+      "path": "/card/:id",
+      "handler": "card.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/deck-composes",
-      "handler": "deck-compose.create",
+      "path": "/card",
+      "handler": "card.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/deck-composes/:id",
-      "handler": "deck-compose.update",
+      "path": "/card/:id",
+      "handler": "card.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/deck-composes/:id",
-      "handler": "deck-compose.delete",
+      "path": "/card/:id",
+      "handler": "card.delete",
       "config": {
         "policies": []
       }
