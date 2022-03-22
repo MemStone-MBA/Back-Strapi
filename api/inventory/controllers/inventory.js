@@ -12,12 +12,9 @@ module.exports = {
       }
       return  await strapi.services.inventory.find(ctx.query);
     } catch (err) {
-      console.log(err)
       return err;
     }
     finally {
-
-      console.log(ctx)
     }
   },
 };

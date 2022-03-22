@@ -18,20 +18,21 @@
     },
     {
       "method": "GET",
-      "path": "/deck/:id",
-      "handler": "deck.findOne",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/deck/user/:userId",
       "handler": "deck.findUserDeck",
       "config": {
         "policies": []
       }
     },
+    {
+      "method": "GET",
+      "path": "/deck/:id",
+      "handler": "deck.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+
     {
       "method": "POST",
       "path": "/deck",
