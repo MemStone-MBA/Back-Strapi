@@ -1,22 +1,27 @@
-'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
- * to customize this controller
- */
-
-const {sanitizedEntity}  = require("strapi-utils");
-
-
+"use strict";
 module.exports = {
-  async findUserCard(ctx) {
+  findUserCard: async (ctx) => {
+    try {
 
-    const { _idUser } = ctx.params;
-    console.log(ctx)
-    console.log("id user : ", _idUser)
-    const entity = await strapi.service('api::inventory.findUserCard').findOne({IdUser : _idUser});
-    const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
+      const id = ctx.params.userId || "idcsdkcksd"
 
-    return this.transformResponse(sanitizedEntity);
-  }
+      ctx.query = {
+        ...ctx.query,
+        "idUser" :id
+      }
+      return  await strapi.services.inventory.find(ctx.query);
+    /*  console.log("entity : ",entity)
+      const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
+      console.log("response : ",this.transformResponse(sanitizedEntity))
+      return this.transformResponse(sanitizedEntity);*/
+    } catch (err) {
+      console.log(err)
+      return err;
+    }
+    finally {
+
+      console.log(ctx)
+    }
+  },
 };

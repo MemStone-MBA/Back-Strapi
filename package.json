@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@strapi/strapi": "^4.1.5",
     "peer": "^0.6.1",
     "strapi": "^3.6.8",
     "strapi-admin": "^3.6.8",
