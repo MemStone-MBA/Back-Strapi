@@ -11,10 +11,6 @@ module.exports = {
         "idUser" :id
       }
       return  await strapi.services.inventory.find(ctx.query);
-    /*  console.log("entity : ",entity)
-      const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
-      console.log("response : ",this.transformResponse(sanitizedEntity))
-      return this.transformResponse(sanitizedEntity);*/
     } catch (err) {
       console.log(err)
       return err;

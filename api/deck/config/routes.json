@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/deck/user/:userId",
+      "handler": "deck.findUserDeck",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/deck",
       "handler": "deck.create",
