@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/inventory/user/:userId",
+      "handler": "inventory.findUserCard",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/inventory",
       "handler": "inventory.create",
