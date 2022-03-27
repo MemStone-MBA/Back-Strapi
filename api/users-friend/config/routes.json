@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/users-friends",
+      "handler": "users-friend.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users-friends/count",
+      "handler": "users-friend.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users-friends/:id",
+      "handler": "users-friend.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users-friends/user/:userId",
+      "handler": "users-friend.findUserFriends",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users-friends",
+      "handler": "users-friend.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/users-friends/:id",
+      "handler": "users-friend.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/users-friends/:id",
+      "handler": "users-friend.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

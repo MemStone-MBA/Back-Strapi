@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_friends",
+  "info": {
+    "name": "UsersFriend",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "userFriendId1": {
+      "type": "string"
+    },
+    "userFriendId2": {
+      "type": "string"
+    }
+  }
+}
