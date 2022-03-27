@@ -16,23 +16,26 @@ module.exports = {
         all.push(elem)
       })
 
-      let allUsers = []
+      
+      // use map() to perform a fetch and handle the response for each url
+      let result = await Promise.all(all.map(  (userFriend)  =>  {
 
-      all.forEach(userFriend => {
-
-        let promise = new Promise( async (resolve, reject) => {
-          console.log(strapi.services)
-         let data = await strapi.services.user.find({"userId": userFriend.id})
-            resolve(data)
-        });
-
-        promise.then((res)=> allUsers.push(res))
-
+        if(userFriend.userFriendId1 == id)
+        {
+          return strapi.db.query('user', 'users-permissions').findOne({"id": userFriend.userFriendId2});
+        }else(userFriend.userFriendId2 == id)
+        {
+          return strapi.db.query('user', 'users-permissions').findOne({"id": userFriend.userFriendId1});
+        }
+      }))
+      .then(data => {
+        return  data
+      }).catch(err => {
+        return {status:"err"}
       })
 
-      console.log(allUsers)
-
-      return  all
+      console.log(result)
+      return result;
     } catch (err) {
       return err;
     }
