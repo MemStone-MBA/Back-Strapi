@@ -34,7 +34,6 @@ module.exports = {
         return {status:"err"}
       })
 
-      console.log(result)
       return result;
     } catch (err) {
       return err;
