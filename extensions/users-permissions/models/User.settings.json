@@ -72,6 +72,10 @@
     "coins": {
       "type": "integer",
       "default": 0
+    },
+    "mmr": {
+      "type": "integer",
+      "default": 1000
     }
   }
 }
