@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cases",
+  "info": {
+    "name": "Cases",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "price": {
+      "type": "integer"
+    },
+    "cards": {
+      "type": "json"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

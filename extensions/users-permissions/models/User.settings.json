@@ -68,6 +68,10 @@
     "Icon": {
       "type": "text",
       "default": "avatar.svg"
+    },
+    "coins": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
