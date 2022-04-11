@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/users-cases/user/:userId",
+      "handler": "users-cases.findUserCases",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/users-cases/:id",
       "handler": "users-cases.findOne",
       "config": {

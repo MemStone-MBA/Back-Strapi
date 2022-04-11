@@ -1,8 +1,23 @@
 'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+module.exports = {
+  findUserCases: async (ctx) => {
+    try {
 
-module.exports = {};
+      const id = ctx.params.userId || "0000"
+
+      ctx.query = {
+        ...ctx.query,
+        "idUser" :id
+      }
+      return  await strapi.services['users-cases'].find(ctx.query);
+    } catch (err) {
+      console.log(err)
+      return err;
+    }
+    finally {
+
+      console.log(ctx)
+    }
+  },
+};
