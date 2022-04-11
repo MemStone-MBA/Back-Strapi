@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_cases",
+  "info": {
+    "name": "UsersCases",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "idUser": {
+      "type": "string"
+    },
+    "idCase": {
+      "type": "string"
+    }
+  }
+}
