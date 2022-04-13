@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offers",
+  "info": {
+    "name": "offers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "Price": {
+      "type": "integer",
+      "required": true
+    },
+    "cases": {
+      "type": "json"
+    }
+  }
+}
