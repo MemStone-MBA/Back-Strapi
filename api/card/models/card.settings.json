@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "card",
   "info": {
-    "name": "Card"
+    "name": "Card",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -26,6 +28,10 @@
     },
     "cost": {
       "type": "integer"
+    },
+    "rarety": {
+      "type": "string",
+      "default": "commun"
     }
   }
 }
