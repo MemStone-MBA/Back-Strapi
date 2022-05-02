@@ -34,7 +34,7 @@
     },
     {
       "method": "GET",
-      "path": "/users-friends/user/:Username",
+      "path": "/users-friends/user/:userUsername",
       "handler": "users-friend.findUserFriendsByUsername",
       "config": {
         "policies": []
