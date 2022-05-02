@@ -33,6 +33,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/users-friends/user/:username",
+      "handler": "users-friend.findUserFriendsByUsername",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/users-friends",
       "handler": "users-friend.create",
