@@ -44,30 +44,32 @@ module.exports = {
   findUserFriendsByUsername: async (ctx) => {
     try {
 
-      const username = ctx.params.username || "0000000"
 
-      let data = await strapi.services['users-friend'].find( {"username" :username})
+      const username = ctx.params.username
+      const userID = ctx.params.id
 
-      let all = [];
-      data?.forEach(elem=>{
-        all.push(elem)
-      })
+      if(!username || !userID){
+        return {"status": 404, "message": "params not found" }
+      }
 
-      // use map() to perform a fetch and handle the response for each url
-      let result = await Promise.all(all.map(  (userFriend)  =>  {
+      let userFriend = await strapi.db.query('user', 'users-permissions').findOne({"username": username});
 
-        if(userFriend.username == username)
+      if(!userFriend || !userFriend.id){
+        return {"status": 404, "message": "Friend not found"  }
+      }
+
+      let res = await strapi.services['users-friend'].create(
         {
-          return strapi.db.query('user', 'users-permissions').findOne({"username": userFriend.username});
+          "userFriendId1" : userFriend.id,
+          "userFriendId2" : userID
         }
-      }))
-      .then(data => {
-        return  data
-      }).catch(err => {
-        return {status:"err"}
-      })
+      ).catch((err) => {
+        console.log(err)
+      }
+      )
 
-      return result;
+      return {"status" : 200}
+
     } catch (err) {
       return err;
     }
